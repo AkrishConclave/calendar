@@ -108,10 +108,11 @@ export default {
       ],
       busyDays: [3],
       workingDays: [8],
+      testMode: true
     };
   },
   mounted() {
-    console.log("Calendar.vue смонтирован");
+    if(this.testMode){ console.log("Calendar.vue смонтирован"); }
   },
   computed: {
     daysInMonth() {
