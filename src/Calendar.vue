@@ -80,7 +80,11 @@ export default {
         durationWorkDay: {
             type: Number,
             required: true
-        }
+        },
+        weekendDayNum: {
+            type: Number,
+            required: true
+        },
     },
     name: "Calendar",
     data() {
@@ -173,7 +177,7 @@ export default {
         },
         isWeekend(day) {
             const weekday = new Date(this.currentYear, this.currentMonth, day).getDay();
-            return weekday === 0 || weekday === 0;
+            return weekday === this.weekendDayNum;
         },
         isToday(day) {
             return this.dayNow === day && this.monthNow === this.currentMonth;
