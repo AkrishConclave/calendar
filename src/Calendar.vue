@@ -209,6 +209,18 @@ export default {
     /*    display: flex;
         flex-direction: column;*/
     width: 22rem;
+    max-width: 100%;
+}
+
+.calendar-container {
+    width: 100%;
+}
+
+.time-selector .hours,
+.time-selector .minutes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
 }
 
 .calendar-table {
@@ -355,6 +367,17 @@ export default {
 .title-date-hour {
     margin: 1rem 0;
     font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    #calendar-container {
+        width: 100%;
+    }
+
+    .calendar-weekday, .calendar-day {
+        font-size: 0.85rem;
+        padding: 6px;
+    }
 }
 </style>
 
